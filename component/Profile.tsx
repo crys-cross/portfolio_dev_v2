@@ -1,7 +1,14 @@
-import React from "react";
+import Image from "next/image";
 
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <section>
+      <div>
+        <div>Image Here</div>
+      </div>
+      <div>Profile Here</div>
+    </section>
+  );
 };
 
 export default Profile;
