@@ -2,32 +2,33 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+// import from "./"
 
 const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
-      <div>DEV PORTFOLIO</div>
+    <div className="flex-between w-full mb-16 pt-3">
+      <div className="text-sky-700">DEV PORTFOLIO</div>
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         <li>
-          <Link href="#">My Profile</Link>
+          <Link href="#myprofile">My Profile</Link>
         </li>
         <li>
-          <Link href="#">Featured Projects</Link>
+          <Link href="#featured">Featured Projects</Link>
         </li>
         <li>
-          <Link href="#">Other Projects</Link>
+          <Link href="#others">Other Projects</Link>
         </li>
         <li>
-          <Link href="#">Contact Me</Link>
+          <Link href="#contact">Contact Me</Link>
         </li>
       </div>
       {/* Mobile Navigation */}
-      <div className="sm:hidden flex relative">
+      <div className="sm:hidden flex relative bg-red-700">
         <div className="flex">
           <Image
-            src={session?.user.image}
+            src="/assets/icons/menu.svg"
             width={37}
             height={37}
             className="rounded-full"
@@ -58,23 +59,18 @@ const Nav = () => {
               >
                 Other Projects
               </Link>
+              <Link
+                href="#contact"
+                className="dropdown_link"
+                onClick={() => setToggleDropdown(false)}
+              >
+                Contact Me
+              </Link>
             </div>
           )}
-          <li>
-            <Link href="#">Profile</Link>
-          </li>
-          <li>
-            <Link href="#">Featured Projects</Link>
-          </li>
-          <li>
-            <Link href="#">Other Projects</Link>
-          </li>
-          <li>
-            <Link href="#">Contact Me</Link>
-          </li>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

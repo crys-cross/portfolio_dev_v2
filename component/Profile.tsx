@@ -4,7 +4,7 @@ const Profile = () => {
   return (
     <section>
       <div>
-        <div>Image Here</div>
+        <div className="text-sky-700">Image Here</div>
       </div>
       <div>Profile Here</div>
     </section>
