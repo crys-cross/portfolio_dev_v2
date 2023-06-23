@@ -8,7 +8,7 @@ const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   return (
     <div className="flex-between w-full mb-16 pt-3">
-      <div className="text-sky-700">DEV PORTFOLIO</div>
+      <div className="bg-red-700">DEV PORTFOLIO</div>
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         <li>
@@ -25,7 +25,7 @@ const Nav = () => {
         </li>
       </div>
       {/* Mobile Navigation */}
-      <div className="sm:hidden flex relative bg-red-700">
+      <div className="sm:hidden flex relative">
         <div className="flex">
           <Image
             src="/assets/icons/menu.svg"
