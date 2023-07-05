@@ -10,7 +10,7 @@ const Nav = () => {
     <div className="flex-between w-full mb-16 pt-3">
       <div className="bg-red-700">DEV PORTFOLIO</div>
       {/* Desktop Navigation */}
-      <div className="sm:flex hidden">
+      <div className="sm:flex hidden list-none">
         <li>
           <Link href="#myprofile">My Profile</Link>
         </li>
@@ -36,6 +36,7 @@ const Nav = () => {
             onClick={() => setToggleDropdown((prev) => !prev)}
             // onClick={() => setToggleDropdown(!toggleDropdown)}
           />
+
           {toggleDropdown && (
             <div className="dropdown">
               <Link
